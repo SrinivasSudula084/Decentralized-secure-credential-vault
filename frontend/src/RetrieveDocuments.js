@@ -116,7 +116,7 @@ const RetrieveDocuments = () => {
     }
 
     try {
-      const response = await fetch(`https://gateway.pinata.cloud/ipfs/${ipfsHash}`);
+      const response = await fetch( `${PINATA_GATEWAY}${ipfsHash}`);
       const encryptedText = await response.text();
 
       const decryptionKey = CryptoJS.SHA256(userAddress).toString();

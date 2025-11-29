@@ -5,8 +5,8 @@ import "./StoreDocuments.css";
 
 
 // Pinata API Credentials
-const PINATA_API_KEY = "8ab759bcffed072e647f";
-const PINATA_SECRET_API_KEY = "0c51004f5a3d19a082a332f74745f5e6ab804fcaefb60106bb3504ab97eab3e3";
+const PINATA_API_KEY = process.env.REACT_APP_PINATA_API_KEY;
+const PINATA_SECRET_API_KEY = process.env.REACT_APP_PINATA_SECRET_KEY;
 
 const contractAddress = "0x84EB872BEE4d2323643A848B5De1f17aB43C69d0";
 const contractABI = [
