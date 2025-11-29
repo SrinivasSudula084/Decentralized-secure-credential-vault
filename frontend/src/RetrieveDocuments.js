@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { ethers } from "ethers";
 import CryptoJS from "crypto-js";
 import "./RetrieveDocuments.css";
-import { contractAddress,contractABI  } from "../config/contractConfig";
+import { contractAddress,contractABI  } from "./config/contractConfig";
 
 const RetrieveDocuments = () => {
   const [userAddress, setUserAddress] = useState(null);
@@ -87,7 +87,7 @@ const RetrieveDocuments = () => {
     }
 
     try {
-      const response = await fetch( `${PINATA_GATEWAY}${ipfsHash}`);
+      const response = await fetch( `https://gateway.pinata.cloud/ipfs/${ipfsHash}`);
       const encryptedText = await response.text();
 
       const decryptionKey = CryptoJS.SHA256(userAddress).toString();

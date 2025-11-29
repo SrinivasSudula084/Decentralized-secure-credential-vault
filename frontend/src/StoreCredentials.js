@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { ethers } from "ethers";
 import CryptoJS from "crypto-js";
 import "./StoreCredentials.css";
-import { contractAddress,contractABI  } from "../config/contractConfig";
+import { contractAddress,contractABI  } from "./config/contractConfig";
 
 const PINATA_API_KEY = process.env.REACT_APP_PINATA_API_KEY;
 const PINATA_SECRET_API_KEY = process.env.REACT_APP_PINATA_SECRET_KEY;

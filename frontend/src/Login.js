@@ -5,7 +5,7 @@ import vaultImage from "./vault-image.jpeg";
 import securityImage from "./security1.jpeg";
 import encryptionImage from "./security2.jpeg";
 import "./Login.css";
-import { contractAddress,contractABI  } from "../config/contractConfig";
+import { contractAddress,contractABI  } from "./config/contractConfig";
 
 
 

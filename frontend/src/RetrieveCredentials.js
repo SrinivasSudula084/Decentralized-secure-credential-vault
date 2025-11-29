@@ -3,7 +3,7 @@ import { ethers } from "ethers";
 import CryptoJS from "crypto-js";
 import axios from "axios";
 import "./RetrieveCredentials.css"; // Import CSS
-import { contractAddress,contractABI  } from "../config/contractConfig";
+import { contractAddress,contractABI  } from "./config/contractConfig";
 
 const PINATA_GATEWAY = "https://gateway.pinata.cloud/ipfs/";
 

@@ -3,7 +3,7 @@ import { ethers } from "ethers";
 import CryptoJS from "crypto-js";
 import "./StoreDocuments.css";
 
-import { contractAddress,contractABI  } from "../config/contractConfig";
+import { contractAddress,contractABI  } from "./config/contractConfig";
 
 // Pinata API Credentials
 const PINATA_API_KEY = process.env.REACT_APP_PINATA_API_KEY;
