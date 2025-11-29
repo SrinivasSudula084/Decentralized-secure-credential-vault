@@ -1,0 +1,32 @@
+.store-documents-container {
+    max-width: 500px;
+    margin: 80px auto 20px; /* Ensures space for the fixed navbar */
+    padding: 20px;
+    background: #1f1f1f;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  h2 {
+    margin-bottom: 15px;
+    color: #f39c12;
+  }
+  
+  button {
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 10px 0;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #e67e22;
+  }
+  

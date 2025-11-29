@@ -1,0 +1,267 @@
+/* 🎨 Light & Dark Mode Support */
+:root {
+  --bg-light: #f9f9f9;
+  --text-light: #222;
+  --card-light: rgba(255, 255, 255, 0.95);
+  --border-light: #ddd;
+  --input-bg-light: #fff;
+  --btn-light: #007bff;
+  --btn-hover-light: #0056b3;
+
+  --bg-dark: #1a1a1a;
+  --text-dark: #f1f1f1;
+  --card-dark: rgba(30, 30, 30, 0.95);
+  --border-dark: #444;
+  --input-bg-dark: #2a2a2a;
+  --btn-dark: #1e90ff;
+  --btn-hover-dark: #0a74da;
+}
+
+/* 🌙 Auto Theme Switching */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--bg-light);
+  color: var(--text-light);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+  }
+}
+
+/* 📌 Navbar */
+.navbar {
+  background: linear-gradient(90deg, var(--btn-light), var(--btn-hover-light));
+  padding: 15px 30px;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  .navbar {
+      background: linear-gradient(90deg, var(--btn-dark), var(--btn-hover-dark));
+  }
+}
+
+/* 🚀 Hero Section */
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 10%;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: var(--btn-light);
+}
+
+.hero-text p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--text-dark);
+}
+
+@media (prefers-color-scheme: dark) {
+  .hero-text h2 {
+      color: var(--btn-dark);
+  }
+
+  .hero-text p {
+      color: var(--text-light);
+  }
+}
+
+/* 🔒 Security Info Section */
+.security-info {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 10%;
+  flex-wrap: wrap;
+}
+
+.info-card {
+  background: var(--card-light);
+  border: 2px solid var(--border-light);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (prefers-color-scheme: dark) {
+  .info-card {
+      background: var(--card-dark);
+      border: 2px solid var(--border-dark);
+      box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+  }
+}
+
+.info-card img {
+  width: 80px;
+  margin-bottom: 15px;
+}
+
+.info-card h3 {
+  font-size: 20px;
+  color: var(--btn-light);
+}
+
+.info-card p {
+  font-size: 16px;
+  color: var(--text-light);
+}
+
+@media (prefers-color-scheme: dark) {
+  .info-card h3 {
+      color: var(--btn-dark);
+  }
+
+  .info-card p {
+      color: var(--text-dark);
+  }
+}
+
+/* 🟣 Glassmorphism Login Box */
+.login-container {
+  background: var(--card-light);
+  border: 2px solid var(--border-light);
+  border-radius: 15px;
+  padding: 50px;
+  width: 450px;
+  text-align: center;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  .login-container {
+      background: var(--card-dark);
+      border: 2px solid var(--border-dark);
+      box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.1);
+  }
+}
+
+.login-container h3 {
+  font-size: 30px;
+  margin-bottom: 25px;
+  color: var(--btn-dark);
+}
+
+.login-container input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 2px solid var(--border-light);
+  font-size: 16px;
+  outline: none;
+  background: var(--input-bg-light);
+  color: var(--text-light);
+  transition: border 0.3s ease, background 0.3s ease;
+}
+
+.login-container input:focus {
+  border-color: var(--btn-light);
+}
+
+@media (prefers-color-scheme: dark) {
+  .login-container h3 {
+      color: var(--text-dark);
+  }
+
+  .login-container input {
+      background: var(--input-bg-dark);
+      border: 2px solid var(--border-dark);
+      color: var(--text-dark);
+  }
+
+  .login-container input:focus {
+      border-color: var(--btn-dark);
+  }
+}
+.connected-text{
+  color:#0a74da
+}
+
+/* 💡 Placeholder Text */
+::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+@media (prefers-color-scheme: dark) {
+  ::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+
+/* 🌟 Neon Button */
+.neon-button {
+  background: var(--btn-light);
+  color: white;
+  font-size: 18px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-transform: uppercase;
+  font-weight: bold;
+  box-shadow: 0px 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+.neon-button:hover {
+  background: var(--btn-hover-light);
+  box-shadow: 0px 6px 20px rgba(0, 123, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+@media (prefers-color-scheme: dark) {
+  .neon-button {
+      background: var(--btn-dark);
+      box-shadow: 0px 4px 15px rgba(30, 144, 255, 0.3);
+  }
+
+  .neon-button:hover {
+      background: var(--btn-hover-dark);
+      box-shadow: 0px 6px 20px rgba(30, 144, 255, 0.5);
+  }
+}
+
+/* 📌 Footer */
+
+
+/* 📌 Footer */
+.footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
